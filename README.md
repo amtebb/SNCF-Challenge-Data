@@ -44,35 +44,6 @@ Le but spécifique est de prédire, à court terme, le temps d'attente d'un trai
 - Python 3.8+
 - pip (gestionnaire de paquets Python)
 
-### Installation
-
-```bash
-# Cloner le dépôt
-git clone https://github.com/username/transilien-prediction.git
-cd transilien-prediction
-
-# Créer un environnement virtuel
-python -m venv venv
-source venv/bin/activate  # Sous Windows: venv\Scripts\activate
-
-# Installer les dépendances
-pip install -r requirements.txt
-```
-
-### Utilisation
-
-1. Placez vos données dans le dossier `data/`
-2. Exécutez le script principal pour entraîner et évaluer le modèle:
-
-```bash
-python main.py --model lightgbm --optimize True
-```
-
-Pour générer une soumission:
-
-```bash
-python main.py --model lightgbm --predict True --output submission.csv
-```
 
 ## Approche méthodologique
 
@@ -84,7 +55,7 @@ python main.py --model lightgbm --predict True --output submission.csv
 
 ### 2. Prétraitement des données
 
-- Traitement des valeurs manquantes
+
 - Création de caractéristiques temporelles (heure, jour de la semaine, etc.)
 - Encodage des variables catégorielles (gare, train)
 - Création de caractéristiques avancées basées sur les statistiques par gare
